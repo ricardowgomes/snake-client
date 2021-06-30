@@ -4,24 +4,39 @@ let connection;
 const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
-  }
 
-  if (key === 'w') {
+    // } else if (key === 'c') {
+    //   let message = [];
+
+    //   while (key !== 'c') {
+    //     process.stdin.on('data', (text) => {
+    //       message.push(text);
+    //     });
+    //   }
+    //   connection.write(`Say: ${message.join('')}`);
+
+    // CRY FOR HELP
+  } else if (key === 'q') {
+    connection.write(`Say: I need`);
+
+  } else if (key === 'e') {
+    connection.write(`Say: help!`);
+
+    // MOVEMENTS
+  } else if (key === 'w') {
     connection.write("Move: up");
-  }
 
-  if (key === 'a') {
+  } else if (key === 'a') {
     connection.write("Move: left");
-  }
 
-  if (key === 's') {
+  } else if (key === 's') {
     connection.write("Move: down");
-  }
 
-  if (key === 'd') {
+  } else if (key === 'd') {
     connection.write("Move: right");
   }
 };
+
 
 // const moveUp = (key) => {
 //   connection.write("Move: up");
